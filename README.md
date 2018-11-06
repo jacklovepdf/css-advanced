@@ -111,9 +111,18 @@ some tips and experience to css;
 3.背景和边框
 
 3.1 半透明边框
+    background-clip 属性规定背景的绘制区域。
+    | 属性值        | 含义                   |
+    | --------     | -----:                |
+    | border-box   | 背景被裁剪到边框盒。     |
+    | padding-box  | 背景被裁剪到内边距框。   |
+    | content-box  | 背景被裁剪到内容框。     |
+
+3.2 多重边框
 
 
-3.2
+
+3.3
 
 
 4.形状
