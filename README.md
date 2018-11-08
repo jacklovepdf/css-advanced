@@ -75,20 +75,20 @@ some tips and experience to css;
    对于任何软件开发来说，保持代码可复用以及可维护是最大的挑战之一；
 
 
-(1) 响应式网页设计
+1.1 响应式网页设计
 
 使用百分比长度来取代固定长度。如果实在做不到这一点，也应该 尝试使用与视口相关的单位(vw、vh、vmin 和 vmax)，它们的值解析为视口宽度或高度的百分比。
- 当你需要在较大分辨率下得到固定宽度时，使用 max-width 而不是 width，因为它可以适应较小的分辨率，而无需使用媒体查询。
- 不要忘记为**替换元素**(比如 img、object、video、iframe 等)设置一个max-width，值为 100%。
- 假如背景图片需要完整地铺满一个容器，不管容器的尺寸如何变化， background-size: cover 这个属性都可以做到。但是，我们也要时刻牢记——带宽并不是无限的，因此在移动网页中通过CSS把一张大图缩小显示往往是不太明智的。
- 当图片(或其他元素)以行列式进行布局时，让视口的宽度来决定列的数量。弹性盒布局(即 Flexbox)或者 display: inline-block加上常规的文本折行行为，都可以实现这一点。
- 在使用多列文本时，指定column-width(列宽)而不是指定 column-count(列数)，这样它就可以在较小的屏幕上自动显示为单列布局。
- 媒体查询中使用em或者rem来替换固定单位（eg px）
+(1)当你需要在较大分辨率下得到固定宽度时，使用 max-width 而不是 width，因为它可以适应较小的分辨率，而无需使用媒体查询。
+(2)不要忘记为**替换元素**(比如 img、object、video、iframe 等)设置一个max-width，值为 100%。
+(3)假如背景图片需要完整地铺满一个容器，不管容器的尺寸如何变化， background-size: cover 这个属性都可以做到。但是，我们也要时刻牢记——带宽并不是无限的，因此在移动网页中通过CSS把一张大图缩小显示往往是不太明智的。
+(4)当图片(或其他元素)以行列式进行布局时，让视口的宽度来决定列的数量。弹性盒布局(即 Flexbox)或者 display: inline-block加上常规的文本折行行为，都可以实现这一点。
+(5)在使用多列文本时，指定column-width(列宽)而不是指定 column-count(列数)，这样它就可以在较小的屏幕上自动显示为单列布局。
+(6)媒体查询中使用em或者rem来替换固定单位（eg px）
 
 **Note:**响应式布局实际上并不需要过多的媒体查询，尽可能实现弹性可伸缩的布局，并在媒体查询的各个断点区间内指定相应的尺寸。
 这意味着媒体查询只是把一些外边距收拢到最小程度，然后把因为屏幕太窄而无法显示成双列的侧栏调整为单列布局而已
 
-(2) 合理使用简写
+1.2 合理使用简写
 
 ```javascript
     background: url(tr.png) top right, url(br.png) bottom right,
@@ -97,7 +97,8 @@ some tips and experience to css;
     background-repeat: no-repeat;
 ```
 
-(3) 关于使用css预处理器
+1.3 关于使用css预处理器
+
 优点：
 
 
@@ -111,7 +112,8 @@ some tips and experience to css;
 3.背景和边框
 
 3.1 半透明边框
-    background-clip 属性规定背景的绘制区域。
+
+(1) background-clip 属性规定背景的绘制区域。
     | 属性值        | 含义                   |
     | --------     | -----:                |
     | border-box   | 背景被裁剪到边框盒。     |
@@ -119,6 +121,10 @@ some tips and experience to css;
     | content-box  | 背景被裁剪到内容框。     |
 
 3.2 多重边框
+
+(1) box-shadow 属性向框添加一个或多个阴影。
+    box-shadow: h-shadow v-shadow blur spread color inset;
+
 
 
 
