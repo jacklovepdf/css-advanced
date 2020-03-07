@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>外边距塌陷</title>
+    <style>
+        .blue, .red-inner {
+            height: 50px;
+            margin: 10px 0;
+        }
+
+        .blue {
+            background: blue;   
+        }
+
+        .red-outer {
+            overflow: hidden;
+            background: red;
+        } 
+    </style>
+</head>
+
+<body>
+    <div class="blue"></div>
+    <div class="red-outer">
+        <div class="red-inner">red inner</div>
+    </div>
+</body>
+</html>
